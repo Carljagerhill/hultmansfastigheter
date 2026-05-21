@@ -6,9 +6,10 @@ const ArrowIcon = () => (
   </svg>
 )
 
+const base = import.meta.env.BASE_URL
 const cottages = [
   {
-    image: '/assets/ovre-exterior.jpg',
+    image: `${base}assets/ovre-exterior.jpg`,
     tag: 'Timmerhus · 60 m²',
     price: 'fr. 7 400 kr / vecka',
     num: 'I',
@@ -19,7 +20,7 @@ const cottages = [
     specs: [{ val: '60', label: 'm²' }, { val: '6+2', label: 'bäddar' }, { val: '2', label: 'sovrum' }, { val: '1', label: 'bastu' }],
   },
   {
-    image: '/assets/storstuga-exterior.jpg',
+    image: `${base}assets/storstuga-exterior.jpg`,
     imagePosition: 'center 40%',
     tag: 'Storstuga · 135 m²',
     price: 'fr. 13 200 kr / vecka',

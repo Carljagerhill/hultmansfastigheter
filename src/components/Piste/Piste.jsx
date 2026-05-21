@@ -10,7 +10,7 @@ export default function Piste() {
         </div>
       </div>
       <div className={styles.pisteFrame}>
-        <img src="/assets/pistkarta.png" alt="Pistkarta över Sälfjället med GrandGårdarna utmarkerade" />
+        <img src={`${import.meta.env.BASE_URL}assets/pistkarta.png`} alt="Pistkarta över Sälfjället med GrandGårdarna utmarkerade" />
         <div className={styles.pisteOverlay}>
           <div className={styles.stat}><b>−12<em>°C</em></b><span>Just nu</span></div>
           <div className={styles.stat}><b>84<em>cm</em></b><span>Snödjup</span></div>

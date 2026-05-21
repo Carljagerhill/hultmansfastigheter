@@ -1,14 +1,15 @@
 import { useState, useCallback, useEffect } from 'react'
 import styles from './Gallery.module.css'
 
+const base = import.meta.env.BASE_URL
 const tiles = [
-  { src: '/assets/husbild.jpg', label: 'Storstugan, vinter' },
-  { src: '/assets/utsikt.jpg', label: 'Utsikt mot Städjan' },
-  { src: '/assets/kok1.jpg', label: 'Köket' },
-  { src: '/assets/sovloft.jpg', label: 'Sovloftet' },
-  { src: '/assets/hall.jpg', label: 'Hall med trapp' },
-  { src: '/assets/sovrum1.jpg', label: 'Sovrum' },
-  { src: '/assets/skylt.jpg', label: 'Välkomstskylten' },
+  { src: `${base}assets/husbild.jpg`, label: 'Storstugan, vinter' },
+  { src: `${base}assets/utsikt.jpg`, label: 'Utsikt mot Städjan' },
+  { src: `${base}assets/kok1.jpg`, label: 'Köket' },
+  { src: `${base}assets/sovloft.jpg`, label: 'Sovloftet' },
+  { src: `${base}assets/hall.jpg`, label: 'Hall med trapp' },
+  { src: `${base}assets/sovrum1.jpg`, label: 'Sovrum' },
+  { src: `${base}assets/skylt.jpg`, label: 'Välkomstskylten' },
 ]
 
 export default function Gallery({ onOpen }) {
