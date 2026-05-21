@@ -32,7 +32,6 @@ export default function Footer() {
         </div>
         <div className={styles.ftBottom}>
           <span>© Hultmans i Örebro AB · 2026</span>
-          <span>Mikael Hultman, värd</span>
         </div>
       </div>
     </footer>

@@ -1,5 +1,11 @@
 import styles from './Piste.module.css'
 
+const stats = [
+  { val: '−12', unit: '°C', label: 'Just nu' },
+  { val: '84', unit: 'cm', label: 'Snödjup' },
+  { val: '12', unit: '/14', label: 'Liftar öppna' },
+]
+
 export default function Piste() {
   return (
     <section className={styles.piste} id="piste">
@@ -12,10 +18,22 @@ export default function Piste() {
       <div className={styles.pisteFrame}>
         <img src={`${import.meta.env.BASE_URL}assets/pistkarta.png`} alt="Pistkarta över Sälfjället med GrandGårdarna utmarkerade" />
         <div className={styles.pisteOverlay}>
-          <div className={styles.stat}><b>−12<em>°C</em></b><span>Just nu</span></div>
-          <div className={styles.stat}><b>84<em>cm</em></b><span>Snödjup</span></div>
-          <div className={styles.stat}><b>12<em>/14</em></b><span>Liftar öppna</span></div>
+          {stats.map(s => (
+            <div className={styles.stat} key={s.label}>
+              <b>{s.val}<em>{s.unit}</em></b>
+              <span>{s.label}</span>
+            </div>
+          ))}
         </div>
+      </div>
+      {/* Stats row shown below image on mobile */}
+      <div className={styles.pisteStatsMobile}>
+        {stats.map(s => (
+          <div className={styles.stat} key={s.label}>
+            <b>{s.val}<em>{s.unit}</em></b>
+            <span>{s.label}</span>
+          </div>
+        ))}
       </div>
     </section>
   )

@@ -13,7 +13,7 @@
 .v { font-size: 16px; font-weight: 500; display: flex; align-items: center; gap: 8px; }
 .v svg { color: var(--ember); opacity: .7; }
 .go {
-  padding: 0 28px; background: var(--ink); color: #fff; border-radius: 6px;
+  padding: 0 28px; background: var(--ember); color: #fff; border-radius: 6px;
   font-weight: 600; font-size: 14px; letter-spacing: .04em; text-transform: uppercase;
   display: inline-flex; align-items: center; gap: 10px;
 }

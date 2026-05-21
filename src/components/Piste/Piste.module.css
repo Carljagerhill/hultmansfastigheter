@@ -8,8 +8,21 @@
 .stat b { font-size: 42px; font-weight: 500; letter-spacing: -.03em; line-height: 1; font-feature-settings: "tnum"; color: #fff; }
 .stat b em { font-family: 'Newsreader', serif; font-style: italic; color: #D4A017; font-size: 24px; }
 .stat span { font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: .18em; color: rgba(255,255,255,.7); text-transform: uppercase; }
+
+.pisteStatsMobile { display: none; }
+
 @media (max-width: 900px) {
   .pisteHead { grid-template-columns: 1fr; gap: 18px; }
-  .pisteOverlay { grid-template-columns: 1fr 1fr; padding: 24px var(--pad); }
-  .pisteFrame { aspect-ratio: 3/4; }
+  .pisteFrame { aspect-ratio: auto; height: auto; overflow: hidden; }
+  .pisteFrame img { width: 100%; height: auto; object-fit: unset; display: block; transform: scale(1.06); }
+  .pisteFrame::after { display: none; }
+  .pisteOverlay { display: none; }
+
+  .pisteStatsMobile {
+    display: grid; grid-template-columns: 1fr 1fr 1fr;
+    gap: 24px; padding: 32px var(--pad);
+    background: #1a3a15;
+  }
+  .pisteStatsMobile .stat b { color: #fff; }
+  .pisteStatsMobile .stat span { color: rgba(255,255,255,.6); }
 }
