@@ -7,5 +7,5 @@
 .ftTop h5 { margin: 0 0 14px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: .22em; color: rgba(255,255,255,.45); text-transform: uppercase; font-weight: 500; }
 .ftTop a, .ftTop span { display: block; padding: 5px 0; font-size: 15px; color: rgba(255,255,255,.85); }
 .ftTop a:hover { color: #fff; }
-.ftBottom { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 18px; padding-top: 24px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: .18em; color: rgba(255,255,255,.55); text-transform: uppercase; }
+.ftBottom { display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 24px; padding-top: 24px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: .18em; color: rgba(255,255,255,.55); text-transform: uppercase; }
 @media (max-width: 900px) { .ftTop { grid-template-columns: 1fr 1fr; gap: 32px; } }
