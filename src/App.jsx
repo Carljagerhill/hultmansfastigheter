@@ -26,14 +26,14 @@ export default function App() {
       <Booker />
       <Intro />
       <Band
-        image={`${import.meta.env.BASE_URL}assets/storstuga-exterior.jpg`}
+        image={`${import.meta.env.BASE_URL}assets/boende_soloppgang_trysil.jpg`}
         tagline="Storstugan · 135 m²"
         title='Plats för<br/>hela <em>släkten</em>.'
         description="Elva bäddar i tre sovrum och sovloft. Öppen spis i den stora storstugan, två badrum och en bastu som värms snabbt."
       />
       <Cottages />
       <Band
-        image={`${import.meta.env.BASE_URL}assets/utsikt.jpg`}
+        image={`${import.meta.env.BASE_URL}assets/salen_utsikt.jpg`}
         tagline="Vy från solaltanen"
         title='Nittio kilometer<br/>fri <em>sikt</em>.'
         description="Mot Städjan i väster. Lika fin om morgonen med kaffe och frost som om kvällen när solen försvinner bakom fjället."

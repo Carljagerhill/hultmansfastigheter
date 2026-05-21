@@ -9,18 +9,18 @@ const ArrowIcon = () => (
 const base = import.meta.env.BASE_URL
 const cottages = [
   {
-    image: `${base}assets/ovre-exterior.jpg`,
+    image: `${base}assets/boende_litenstuga.jpg`,
     tag: 'Timmerhus · 60 m²',
     price: 'fr. 7 400 kr / vecka',
     num: 'I',
     title: 'Övre',
     titleEm: 'GrandGårdarna',
-    addresses: ['Mellangårdsv. 13A · 13B', 'Övregårdsv. 5A · 5B', 'Övregårdsv. 9A · 9B'],
+    addresses: ['Övregårdsv. 5A · 5B', 'Övregårdsv. 9A · 9B'],
     desc: 'Riktiga timmerhus i två våningar — souterräng nedan och en luftig storstuga ovan. Sex ordinarie bäddar i två sovrum (4+2) plus två extra i soffan. Storstugan har kabel-TV, fullt utrustad köksavdelning, bastu, torkskåp och solaltan med utemöbler.',
     specs: [{ val: '60', label: 'm²' }, { val: '6+2', label: 'bäddar' }, { val: '2', label: 'sovrum' }, { val: '1', label: 'bastu' }],
   },
   {
-    image: `${base}assets/storstuga-exterior.jpg`,
+    image: `${base}assets/boende_storstuga.jpg`,
     imagePosition: 'center 40%',
     tag: 'Storstuga · 135 m²',
     price: 'fr. 13 200 kr / vecka',

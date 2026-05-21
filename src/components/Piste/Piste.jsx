@@ -16,7 +16,7 @@ export default function Piste() {
         </div>
       </div>
       <div className={styles.pisteFrame}>
-        <img src={`${import.meta.env.BASE_URL}assets/pistkarta.png`} alt="Pistkarta över Sälfjället med GrandGårdarna utmarkerade" />
+        <img src={`${import.meta.env.BASE_URL}assets/falkabacken.jpg`} alt="Falkabacken, Sälfjället" />
         <div className={styles.pisteOverlay}>
           {stats.map(s => (
             <div className={styles.stat} key={s.label}>
