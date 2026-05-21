@@ -1,0 +1,148 @@
+.gallery { padding: 140px var(--pad); background: var(--paper-2); }
+
+.galHead {
+  max-width: 1500px; margin: 0 auto 48px;
+  display: grid; grid-template-columns: 1fr 1.2fr; gap: 48px; align-items: end;
+}
+
+/* ---- Stage ---- */
+.stage {
+  position: relative;
+  max-width: 1500px; margin: 0 auto;
+  aspect-ratio: 21/9;
+  border-radius: 12px; overflow: hidden;
+  background: var(--ink);
+  cursor: zoom-in;
+  box-shadow: 0 40px 100px -20px rgba(24,29,42,.28);
+}
+
+/* ---- Slides ---- */
+.slide {
+  position: absolute; inset: 0;
+  background-size: cover; background-position: center;
+  opacity: 0;
+  transform: scale(1.04);
+  transition: opacity 0s, transform 0s;
+  will-change: transform, opacity;
+}
+.slideActive {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity .6s ease, transform 6s ease;
+  z-index: 1;
+}
+.slidePrev {
+  opacity: 1; transform: scale(1.04); z-index: 0;
+  transition: none;
+}
+.slideExitLeft {
+  animation: exitLeft .6s ease forwards;
+  z-index: 0;
+}
+.slideExitRight {
+  animation: exitRight .6s ease forwards;
+  z-index: 0;
+}
+@keyframes exitLeft  { to { opacity: 0; transform: translateX(-4%) scale(1.04); } }
+@keyframes exitRight { to { opacity: 0; transform: translateX(4%) scale(1.04); } }
+
+/* ---- Gradient overlay ---- */
+.overlay {
+  position: absolute; inset: 0; z-index: 2; pointer-events: none;
+  background: linear-gradient(
+    to bottom,
+    transparent 50%,
+    rgba(24,29,42,.55) 100%
+  );
+}
+
+/* ---- Bottom bar ---- */
+.bar {
+  position: absolute; left: 0; right: 0; bottom: 0; z-index: 4;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 22px 28px 26px;
+}
+.label {
+  font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: .2em;
+  color: rgba(255,255,255,.9); text-transform: uppercase;
+}
+.counter {
+  font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: .18em;
+  color: rgba(255,255,255,.6);
+}
+
+/* ---- Dots ---- */
+.dots { display: flex; align-items: center; gap: 8px; }
+.dot {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: rgba(255,255,255,.35);
+  border: none; padding: 0; cursor: pointer;
+  transition: background .25s, transform .25s;
+}
+.dot:hover { background: rgba(255,255,255,.7); }
+.dotActive {
+  background: #fff;
+  transform: scale(1.4);
+}
+
+/* ---- Arrows ---- */
+.arrow {
+  position: absolute; top: 50%; transform: translateY(-50%); z-index: 4;
+  width: 52px; height: 52px; border-radius: 50%;
+  background: rgba(246,242,232,.08); backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,.18); color: #fff;
+  display: grid; place-items: center;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity .25s, background .2s, transform .2s;
+}
+.stage:hover .arrow { opacity: 1; }
+.arrow:hover {
+  background: rgba(246,242,232,.22);
+  transform: translateY(-50%) scale(1.08);
+}
+.arrowL { left: 20px; }
+.arrowR { right: 20px; }
+
+/* ---- Progress bar ---- */
+.progress {
+  position: absolute; left: 0; right: 0; bottom: 0; z-index: 5;
+  height: 2px; background: rgba(255,255,255,.12);
+}
+.progressFill {
+  height: 100%; background: var(--ember);
+  transition: width .5s cubic-bezier(.4,0,.2,1);
+}
+
+/* ---- Image title ---- */
+.imageTitle {
+  max-width: 1500px; margin: 20px auto 0;
+  display: flex; align-items: baseline; gap: 16px;
+}
+.imageTitleNum {
+  font-family: 'Newsreader', serif; font-style: italic;
+  font-size: 48px; font-weight: 500; line-height: 1;
+  letter-spacing: -.02em; color: #D4A017;
+}
+.imageTitleLabel {
+  font-size: 22px; font-weight: 500; letter-spacing: -.02em;
+  color: var(--ink); transition: opacity .4s;
+}
+.imageTitleTotal {
+  font-family: 'IBM Plex Mono', monospace; font-size: 11px;
+  letter-spacing: .2em; color: var(--muted); text-transform: uppercase;
+  margin-left: auto;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 900px) {
+  .galHead { grid-template-columns: 1fr; gap: 18px; }
+  .stage { aspect-ratio: 4/3; border-radius: 8px; }
+  .arrow { opacity: 1; width: 40px; height: 40px; }
+  .label { font-size: 10px; }
+  .imageTitleNum { font-size: 36px; }
+  .imageTitleLabel { font-size: 18px; }
+}
+@media (max-width: 500px) {
+  .bar { padding: 16px 16px 20px; }
+}

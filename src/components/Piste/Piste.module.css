@@ -1,0 +1,15 @@
+.piste { padding: 140px 0 0; background: var(--paper); }
+.pisteHead { padding: 0 var(--pad); max-width: 1500px; margin: 0 auto 56px; display: grid; grid-template-columns: 1fr 1.2fr; gap: 48px; align-items: end; }
+.pisteFrame { position: relative; width: 100%; aspect-ratio: 16/9; overflow: hidden; background: #0a1224; }
+.pisteFrame img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.pisteFrame::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 55%, rgba(24,29,42,.92)); }
+.pisteOverlay { position: absolute; left: 0; right: 0; bottom: 0; z-index: 2; padding: 48px var(--pad); display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 24px; align-items: end; color: #fff; }
+.stat { display: flex; flex-direction: column; gap: 4px; }
+.stat b { font-size: 42px; font-weight: 500; letter-spacing: -.03em; line-height: 1; font-feature-settings: "tnum"; color: #fff; }
+.stat b em { font-family: 'Newsreader', serif; font-style: italic; color: #D4A017; font-size: 24px; }
+.stat span { font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: .18em; color: rgba(255,255,255,.7); text-transform: uppercase; }
+@media (max-width: 900px) {
+  .pisteHead { grid-template-columns: 1fr; gap: 18px; }
+  .pisteOverlay { grid-template-columns: 1fr 1fr; padding: 24px var(--pad); }
+  .pisteFrame { aspect-ratio: 3/4; }
+}

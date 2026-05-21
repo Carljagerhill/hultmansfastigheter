@@ -1,0 +1,41 @@
+.nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 50;
+  display: flex; justify-content: space-between; align-items: center; gap: 24px;
+  padding: 18px var(--pad);
+  transition: background .3s ease, padding .3s ease, border-color .3s ease, color .3s ease;
+  border-bottom: 1px solid transparent;
+  color: #fff;
+}
+.scrolled {
+  background: rgba(246,242,232,.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  padding: 12px var(--pad);
+  border-bottom-color: var(--line);
+  color: var(--ink);
+}
+.brand { display: flex; align-items: baseline; gap: 12px; }
+.mark {
+  font-family: 'Newsreader', serif; font-style: italic; font-weight: 500;
+  font-size: 24px; letter-spacing: -.02em; line-height: 1;
+}
+.mark em { color: #D4A017; font-style: italic; }
+.sub {
+  font-family: 'IBM Plex Mono', monospace; font-size: 10px;
+  letter-spacing: .22em; opacity: .7; text-transform: uppercase;
+}
+.navlinks { display: flex; gap: 4px; }
+.navlinks a {
+  padding: 9px 14px; font-size: 13.5px; letter-spacing: -.005em;
+  border-radius: 999px; opacity: .85; transition: background .2s, opacity .2s;
+}
+.navlinks a:hover { opacity: 1; background: rgba(255,255,255,.12); }
+.scrolled .navlinks a:hover { background: rgba(24,29,42,.06); }
+.navtools { display: flex; align-items: center; gap: 12px; }
+.bookbtn {
+  padding: 10px 18px; background: var(--ember); color: #fff;
+  border-radius: 999px; font-weight: 600; font-size: 13.5px;
+  display: inline-flex; align-items: center; gap: 8px; transition: background .2s;
+}
+.bookbtn:hover { background: var(--ember-2); }
+@media (max-width: 1100px) { .navlinks { display: none; } }

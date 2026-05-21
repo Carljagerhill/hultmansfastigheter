@@ -1,0 +1,46 @@
+.cottages { padding: 140px var(--pad); max-width: 1500px; margin: 0 auto; }
+.cottagesHead { display: grid; grid-template-columns: 1fr 1.2fr; gap: 48px; align-items: end; margin-bottom: 80px; }
+
+.cottage { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; margin-bottom: 120px; }
+.cottage:nth-child(even) { direction: rtl; }
+.cottage:nth-child(even) > * { direction: ltr; }
+.cottage:last-child { margin-bottom: 0; }
+
+.cottageImg { position: relative; aspect-ratio: 4/5; border-radius: 8px; overflow: hidden; background: var(--paper-2); }
+.img { position: absolute; inset: 0; background-size: cover; background-position: center; transition: transform .8s ease; will-change: transform; }
+.cottage:hover .img { transform: scale(1.04); }
+.tag {
+  position: absolute; top: 18px; left: 18px;
+  background: rgba(24,29,42,.75); color: #fff; padding: 7px 13px; border-radius: 999px;
+  font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: .16em;
+  text-transform: uppercase; backdrop-filter: blur(8px); font-weight: 500;
+}
+.price {
+  position: absolute; top: 18px; right: 18px;
+  background: var(--ember); color: #fff; padding: 8px 14px; border-radius: 999px;
+  font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: .14em;
+  text-transform: uppercase; font-weight: 600;
+}
+
+.cottageInfo { padding: 0 24px; }
+.num { font-family: 'Newsreader', serif; font-style: italic; font-size: 80px; line-height: 1; color: #D4A017; font-weight: 500; letter-spacing: -.02em; }
+.cottageInfo h3 { margin: 6px 0 14px; font-size: clamp(36px,4.5vw,68px); line-height: .96; letter-spacing: -.03em; font-weight: 600; color: var(--ink); }
+.cottageInfo h3 em { font-family: 'Newsreader', serif; font-style: italic; font-weight: 500; color: #D4A017; }
+.addrs { display: flex; flex-direction: column; gap: 3px; margin-bottom: 24px; font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: .12em; color: var(--muted); text-transform: uppercase; }
+.desc { font-size: 17px; line-height: 1.65; color: var(--ink-soft); max-width: 50ch; margin: 0; }
+.specs { display: grid; grid-template-columns: repeat(4,1fr); gap: 14px; margin-top: 32px; padding-top: 24px; border-top: 1px solid var(--line); }
+.s b { display: block; font-size: 32px; font-weight: 500; letter-spacing: -.02em; line-height: 1; font-feature-settings: "tnum"; }
+.s span { display: block; margin-top: 5px; font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: .18em; color: var(--muted); text-transform: uppercase; }
+.cta { display: flex; gap: 10px; margin-top: 32px; flex-wrap: wrap; }
+.primary { padding: 13px 22px; background: var(--ink); color: #fff; border-radius: 999px; font-weight: 600; font-size: 14px; display: inline-flex; align-items: center; gap: 8px; transition: background .2s; }
+.primary:hover { background: var(--ember); }
+.ghost { padding: 13px 22px; border: 1px solid var(--line); color: var(--ink); border-radius: 999px; font-weight: 500; font-size: 14px; transition: background .2s; }
+.ghost:hover { background: var(--paper); }
+
+@media (max-width: 900px) {
+  .cottage { grid-template-columns: 1fr; gap: 24px; margin-bottom: 80px; }
+  .cottage:nth-child(even) { direction: ltr; }
+  .cottagesHead { grid-template-columns: 1fr; gap: 18px; margin-bottom: 48px; }
+  .cottageInfo { padding: 0; }
+  .cottageImg { aspect-ratio: 4/3; }
+}

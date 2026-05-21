@@ -1,0 +1,20 @@
+.intro {
+  padding: 160px var(--pad) 120px; max-width: 1400px; margin: 0 auto;
+  display: grid; grid-template-columns: 1fr 1.4fr; gap: 64px; align-items: start;
+}
+.intro h2 { font-size: clamp(40px, 5vw, 76px); }
+.lede { font-size: 21px !important; line-height: 1.55 !important; }
+.lede strong { color: var(--ink); font-weight: 500; }
+.quote {
+  margin-top: 32px; padding-top: 32px; border-top: 1px solid var(--line);
+  font-family: 'Newsreader', serif; font-style: italic; font-size: 22px;
+  line-height: 1.45; color: #D4A017; max-width: 46ch;
+}
+.sig {
+  display: block; margin-top: 18px;
+  font-family: 'IBM Plex Mono', monospace; font-style: normal;
+  font-size: 11px; letter-spacing: .2em; color: var(--muted); text-transform: uppercase;
+}
+@media (max-width: 900px) {
+  .intro { grid-template-columns: 1fr; gap: 24px; padding: 80px var(--pad) 64px; }
+}

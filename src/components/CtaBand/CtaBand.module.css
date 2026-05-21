@@ -1,0 +1,13 @@
+.ctaBand { position: relative; padding: 160px var(--pad); text-align: center; overflow: hidden; color: #fff; }
+.ctaBand::before { content: ""; position: absolute; inset: 0; z-index: 0; background: url('/assets/utsikt.jpg') center / cover no-repeat; background-attachment: fixed; filter: saturate(.85) contrast(1.02); }
+@supports (-webkit-touch-callout: none) { .ctaBand::before { background-attachment: scroll; } }
+.ctaBand::after { content: ""; position: absolute; inset: 0; z-index: 1; background: linear-gradient(180deg, rgba(18,46,15,.78), rgba(18,46,15,.92)); }
+.ctaBand > * { position: relative; z-index: 2; }
+.ctaBand h2 { margin: 0 auto; font-size: clamp(48px,7vw,120px); line-height: .92; letter-spacing: -.04em; font-weight: 600; max-width: 16ch; text-wrap: balance; color: #fff; }
+.ctaBand h2 em { font-family: 'Newsreader', serif; font-style: italic; font-weight: 500; color: rgba(255,255,255,.55); }
+.ctaBand p { margin: 24px auto 36px; font-size: 18px; line-height: 1.55; color: rgba(255,255,255,.82); max-width: 48ch; }
+.row { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
+.primary { padding: 16px 28px; background: #fff; color: var(--ember); border-radius: 999px; font-weight: 600; font-size: 15px; display: inline-flex; align-items: center; gap: 10px; transition: background .2s, color .2s; }
+.primary:hover { background: var(--paper); }
+.ghost { padding: 16px 24px; border: 1px solid rgba(255,255,255,.35); color: #fff; border-radius: 999px; font-weight: 500; font-size: 15px; backdrop-filter: blur(4px); }
+.ghost:hover { background: rgba(255,255,255,.1); }

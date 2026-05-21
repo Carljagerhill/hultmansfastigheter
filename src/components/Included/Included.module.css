@@ -1,0 +1,19 @@
+.included { background: var(--paper-2); padding: 140px var(--pad); }
+.includedWrap { max-width: 1500px; margin: 0 auto; }
+.includedHead { display: grid; grid-template-columns: 1fr 1.2fr; gap: 48px; align-items: end; margin-bottom: 64px; }
+.ameGrid { display: grid; grid-template-columns: repeat(4,1fr); gap: 0; border-top: 1px solid var(--line); }
+.ame { padding: 32px 0 32px; border-bottom: 1px solid var(--line); padding-right: 24px; position: relative; }
+.ame:not(:nth-child(4n)) { padding-right: 32px; border-right: 1px solid var(--line); }
+.ame:nth-child(n+2):not(:nth-child(4n+1)) { padding-left: 32px; }
+.n { font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: .18em; color: #D4A017; text-transform: uppercase; margin-bottom: 8px; }
+.ame h4 { margin: 0 0 6px; font-size: 22px; font-weight: 500; letter-spacing: -.01em; color: var(--ink); }
+.ame p { margin: 0; font-size: 14px; color: var(--ink-soft); line-height: 1.5; }
+@media (max-width: 980px) {
+  .ameGrid { grid-template-columns: repeat(2,1fr); }
+  .ame:nth-child(2n) { padding-left: 24px !important; border-right: none !important; }
+  .ame:nth-child(2n+1) { border-right: 1px solid var(--line); padding-right: 24px !important; }
+}
+@media (max-width: 600px) {
+  .ameGrid { grid-template-columns: 1fr; }
+  .ame { padding-left: 0 !important; padding-right: 0 !important; border-right: none !important; }
+}

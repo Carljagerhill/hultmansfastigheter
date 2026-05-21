@@ -1,0 +1,53 @@
+.hero {
+  position: relative; height: 100vh; min-height: 680px;
+  display: grid; grid-template-rows: auto 1fr auto; padding: var(--pad);
+  overflow: hidden;
+}
+.heroBg {
+  position: absolute; inset: 0; z-index: 0; will-change: transform;
+}
+.heroBg::before {
+  content: ""; position: absolute; inset: 0;
+  background: url('/assets/husbild.jpg') center 30% / cover no-repeat;
+  transform: scale(1.08);
+}
+.heroBg::after {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(24,29,42,.35) 0%, rgba(24,29,42,.05) 35%, rgba(24,29,42,.05) 55%, rgba(24,29,42,.85) 100%);
+}
+.heroBottom {
+  position: relative; z-index: 2; align-self: end;
+  display: grid; grid-template-columns: 1.5fr 1fr; gap: 48px; align-items: end; color: #fff;
+}
+.heroTitle {
+  font-size: clamp(60px, 11vw, 168px); line-height: .85; letter-spacing: -.045em;
+  font-weight: 600; margin: 0; text-wrap: balance; color: #fff;
+}
+.heroTitle em { font-family: 'Newsreader', serif; font-style: italic; font-weight: 500; color: #D4A017; }
+.heroLede { font-size: 18px; line-height: 1.55; color: rgba(255,255,255,.92); max-width: 42ch; margin: 0 0 28px; }
+.heroMeta {
+  display: grid; grid-template-columns: repeat(2,1fr); gap: 18px 24px;
+  border-top: 1px solid rgba(255,255,255,.22); padding-top: 22px;
+}
+.s { display: flex; flex-direction: column; gap: 3px; }
+.s b { font-size: 28px; font-weight: 500; letter-spacing: -.02em; line-height: 1; color: #fff; }
+.s b em { font-family: 'Newsreader', serif; font-style: italic; color: #D4A017; }
+.s span { font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: .2em; color: rgba(255,255,255,.65); text-transform: uppercase; }
+
+.scrollCue {
+  position: absolute; left: 50%; bottom: 24px; transform: translateX(-50%); z-index: 2;
+  display: flex; flex-direction: column; align-items: center; gap: 10px;
+  font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: .24em;
+  color: rgba(255,255,255,.7); text-transform: uppercase; pointer-events: none;
+}
+.line {
+  width: 1px; height: 34px;
+  background: linear-gradient(180deg, rgba(255,255,255,.6), transparent);
+  animation: fall 2.2s ease-in-out infinite;
+}
+@keyframes fall {
+  0% { transform-origin: top; transform: scaleY(.2); opacity: .3; }
+  50% { transform: scaleY(1); opacity: 1; }
+  100% { transform-origin: bottom; transform: scaleY(.2); opacity: .3; }
+}
+@media (max-width: 900px) { .heroBottom { grid-template-columns: 1fr; gap: 24px; } }

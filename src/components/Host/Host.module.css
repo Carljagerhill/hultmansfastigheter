@@ -1,0 +1,12 @@
+.host { padding: 140px var(--pad); background: var(--paper); }
+.hostWrap { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+.host p { font-size: 18px; line-height: 1.65; color: var(--ink-soft); max-width: 48ch; }
+.host p:first-of-type::first-letter { float: left; font-family: 'Newsreader', serif; font-style: italic; font-size: 80px; line-height: .85; padding: 8px 14px 0 0; color: #D4A017; font-weight: 500; }
+.hostCard { padding: 36px; background: #1a3a15; color: #fff; border-radius: 8px; }
+.label { font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: .24em; color: rgba(255,255,255,.5); text-transform: uppercase; margin-bottom: 10px; }
+.name { font-family: 'Newsreader', serif; font-style: italic; font-size: 56px; line-height: 1; letter-spacing: -.02em; font-weight: 500; }
+.name em { color: #D4A017; }
+.phone { display: block; margin-top: 24px; font-size: 24px; font-weight: 500; letter-spacing: -.01em; color: #fff; }
+.email { display: block; margin-top: 6px; color: #D4A017; font-size: 16px; }
+.role { margin-top: 18px; padding-top: 18px; border-top: 1px solid rgba(255,255,255,.15); font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: .16em; color: #D4A017; text-transform: uppercase; }
+@media (max-width: 900px) { .hostWrap { grid-template-columns: 1fr; gap: 36px; } }
