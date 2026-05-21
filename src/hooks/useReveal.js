@@ -5,10 +5,7 @@ export function useReveal() {
     const io = new IntersectionObserver(
       (entries) => {
         entries.forEach((e) => {
-          if (e.isIntersecting) {
-            e.target.classList.add('in')
-            io.unobserve(e.target)
-          }
+          e.target.classList.toggle('in', e.isIntersecting)
         })
       },
       { threshold: 0.12, rootMargin: '0px 0px -80px 0px' }
